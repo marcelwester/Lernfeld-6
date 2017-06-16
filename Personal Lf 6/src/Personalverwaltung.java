@@ -8,7 +8,7 @@ public class Personalverwaltung {
 		int setNewValue= 0;
 		
 		
-		
+		test
 		
 		int personenzahl=Integer.parseInt(JOptionPane.showInputDialog("Wie viele Personen sollen eingegeben werden?" ));
 		Person[] pers= new Person[personenzahl];
