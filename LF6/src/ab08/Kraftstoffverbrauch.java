@@ -1,0 +1,73 @@
+package ab08;
+
+import javax.swing.JOptionPane;
+
+public class Kraftstoffverbrauch {
+	public static void main(String[] args) {
+		
+		double menge, kilometer, durchschnittKilometer=0, durchschnittMenge=0;
+		double gesamtKilometer=0;
+		double gesamtMenge = 0;
+		
+		int monat = 0;
+        String monatName;
+        
+		
+		//Daten Eingabe
+		for ( int monate=1; monate <= 12; monate++ ){
+			
+			switch (monate) {
+            case 1:  monatName = "January";  
+            break;
+            case 2:  monatName = "February"; 
+            break;
+            case 3:  monatName = "March"; 
+            break;
+            case 4:  monatName = "April";   
+            break;
+            case 5:  monatName = "May";                    
+            break;
+            case 6:  monatName = "June";                    
+            break;
+            case 7:  monatName = "July";                     
+            break;
+            case 8:  monatName = "August";                    
+            break;
+            case 9:  monatName = "September";                     
+            break;
+            case 10: monatName = "October";                     
+            break;
+            case 11: monatName = "November";                     
+            break;
+            case 12: monatName = "December";                     
+            default: monatName = "Kein Monat";                     
+        }
+					
+			
+			menge=Integer.parseInt(JOptionPane.showInputDialog( monatName + " Kraftstoffmenge eingeben: "));
+			kilometer=Integer.parseInt(JOptionPane.showInputDialog( monatName + " Kilometer eingeben: "));
+			gesamtMenge+= menge;
+			gesamtKilometer+= kilometer;
+			durchschnittKilometer= gesamtKilometer / monate;
+			durchschnittMenge= gesamtMenge / monate;
+			
+		}
+		
+	
+		//Spritverbrauch für 100 Kilometer auf ein Jahr berechnen
+		double durchJahresMenge=gesamtMenge * 100 / gesamtKilometer;
+		System.out.println("Spritverbrauch im Jahr auf 100 Kilometer: " + durchJahresMenge);
+		System.out.println("Durchschnittlichen Spritverbrauch pro Monat: " + durchschnittMenge);
+		System.out.println("Durchschnittliche gefahrene Kilometer pro Monat: " + durchschnittKilometer);
+		System.out.println("Gesamte Kraftstoffmenge: " + gesamtMenge);
+		System.out.println("Gesamte Kilometerzahl: " + gesamtKilometer);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,65 @@
+import javax.swing.JOptionPane;
+
+public class Person {
+	
+	String vorname;
+	String nachname;
+	String straﬂe;
+	String ort;
+	String postleitzahl;
+	String hausnummer;
+	
+	
+	
+	//Konstruktoren
+	Person(){
+		
+		this.vorname=JOptionPane.showInputDialog("Vorname eingeben: ");		
+		while (vorname.length() < 3 ){
+			
+			JOptionPane.showMessageDialog(null, "Bitte Vornamen eingeben!");
+			this.vorname=JOptionPane.showInputDialog("Vorname eingeben: ");
+			
+			
+		}
+		this.nachname=JOptionPane.showInputDialog("Nachname eingeben: ");
+		this.straﬂe=JOptionPane.showInputDialog("Straﬂe eingeben: ");
+		this.hausnummer=JOptionPane.showInputDialog("Hausnummer eingeben: ");
+		this.postleitzahl=JOptionPane.showInputDialog("Postleitzahl eingeben: ");
+		this.ort=JOptionPane.showInputDialog("Wohnort eingeben: ");
+				
+	}
+	
+	Person(String vorname, String nachname, String straﬂe, String hausnummer, String postleitzahl, String ort){
+		
+		this.vorname=vorname;
+		this.nachname=nachname;
+		this.straﬂe=straﬂe;
+		this.hausnummer=hausnummer;
+		this.postleitzahl=postleitzahl;
+		this.ort=ort;
+				
+	}	
+	
+	//Methoden
+	void ausgabe(){
+		
+		System.out.println("Vorname: "+ this.vorname );
+		System.out.println("Nachname: "+ this.nachname );
+		System.out.println("Straﬂe: "+ this.straﬂe );
+		System.out.println("Hausnummer: "+ this.hausnummer );
+		System.out.println("Postleitzahl: "+ this.postleitzahl );
+		System.out.println("Ort: "+ this.ort );
+		System.out.println(" ");
+		JOptionPane.showMessageDialog(null,this.vorname +"???\nWow, what a ugly name!\nAt least you know how to program in Java!");
+	}
+	
+	
+
+	
+	
+	
+	
+	
+
+}

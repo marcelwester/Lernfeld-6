@@ -1,0 +1,47 @@
+import javax.swing.JOptionPane;
+
+public class Personalverwaltung {
+	
+	public static void main(String[] args) {
+		
+		
+
+		
+		
+		int personenzahl=Integer.parseInt(JOptionPane.showInputDialog("Wie viele Personen sollen eingegeben werden?" ));
+		Person[] pers= new Person[personenzahl];
+		
+		for (int i=0; i < personenzahl; i++){
+			
+			pers[i]=  new Person();			
+			
+		}
+		
+		
+				
+
+		
+		for (int i=0; i<=pers.length-1; i++ ){
+				
+			pers[i].setChangeHausnummer("Neu");
+			
+		}
+		
+		for (int i=0; i<=pers.length-1; i++ ){
+			
+			System.out.println("Person: " + (i+1) );
+			pers[i].ausgabe();
+			
+					
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+
+}

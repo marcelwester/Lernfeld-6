@@ -1,0 +1,115 @@
+import javax.swing.JOptionPane;
+
+public class Personalverwaltung {
+	
+	public static void main(String[] args) {
+		
+		char changeValue= 'j';
+		int setNewValue= 0;
+		
+		
+		
+		
+		int personenzahl=Integer.parseInt(JOptionPane.showInputDialog("Wie viele Personen sollen eingegeben werden?" ));
+		Person[] pers= new Person[personenzahl];
+		
+		for (int i=0; i < personenzahl; i++){
+			
+			pers[i]=  new Person();			
+			
+		}
+		if ( personenzahl != 0){
+			
+			changeValue= JOptionPane.showInputDialog("Möchten Sie einen Wert ändern j/n? ").charAt(0);
+		}
+		
+		
+				
+		while( changeValue == 'j'){
+		
+			for ( int i=0; i < personenzahl; i++){
+				
+		
+				
+				
+				
+			
+					Object[] options = {"Vorname", "Nachname", "Straße", "Hausnummer", "Postleitzahl", "Ort"};
+
+					int selected = JOptionPane.showOptionDialog(null,
+														"Treffen Sie eine Auswahl",
+	                                                    "Alternativen",
+	                                                    JOptionPane.DEFAULT_OPTION, 
+	                                                    	JOptionPane.INFORMATION_MESSAGE, 
+	                                                    		null, options, options[0]);
+					System.out.println(selected);
+
+					System.exit(0);
+							
+				
+						if (selected == 1){
+							pers[i].vorname = JOptionPane.showInputDialog("Ändern Sie Ihren Vornamen: ");
+								
+						}
+						
+						if (setNewValue == 2){
+							pers[i].nachname = JOptionPane.showInputDialog("Ändern Sie Ihren Nachnamen: ");
+							
+						}
+						if (setNewValue == 3){
+							pers[i].straße = JOptionPane.showInputDialog("Ändern Sie Ihre Straße: ");
+							
+						}
+						if (setNewValue == 4){
+							pers[i].hausnummer = JOptionPane.showInputDialog("Ändern Sie Ihre Hausnummer: ");
+							
+						}
+						if (setNewValue == 5){
+							pers[i].postleitzahl = JOptionPane.showInputDialog("Ändern Sie Ihre Postleitzahl: ");
+							
+						}
+						if (setNewValue == 6){
+							pers[i].ort = JOptionPane.showInputDialog("Ändern Sie Ihren Wohnort: ");
+							
+						}
+			        
+				
+				
+				}
+
+			
+			
+			
+
+			}
+			
+		
+		 // Ende While-Block
+		
+		
+		
+
+
+		
+		
+		
+		
+		for (int i=0; i<=pers.length-1; i++ ){
+			
+			System.out.println("Person: " + (i+1) );
+			pers[i].ausgabe();
+			
+					
+		}
+		
+		
+		
+		
+		
+		
+	}
+}
+	
+	
+
+
