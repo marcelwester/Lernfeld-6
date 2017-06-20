@@ -55,13 +55,10 @@ public class Personalverwaltung {
 			}
 		}
 		**/
-		
-		
-		
-		if (changeValue == 0){
+		int veraenderung = Integer.parseInt(JOptionPane.showInputDialog("Welche Person soll verändert werden?" ));
 		for ( int i=0; i < personenzahl; i++){
 			
-			//pers[veraenderung].hausnummer= JOptionPane.showInputDialog("Welche Person soll verändert werden?" );
+			pers[veraenderung].hausnummer= JOptionPane.showInputDialog("Welche Person soll verändert werden?" );
 	
 			
 		    JFrame frame = new JFrame("Input Dialog Example 3");
@@ -70,16 +67,13 @@ public class Personalverwaltung {
 		        "Personenspeicher",
 		        JOptionPane.QUESTION_MESSAGE, 
 		        null, 
-		        pers,
-		        Arrays.asList(pers).toString());
-		        Arrays.toString(pers);
-		    
+		        pers, 
+		        pers[i]);
 			
 		}
-		}
 		
 		
-		System.out.println(Arrays.toString(pers));
+		
 		while( changeValue == 0){
 		
 			for ( int i=0; i < personenzahl; i++){

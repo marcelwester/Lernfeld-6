@@ -55,9 +55,6 @@ public class Personalverwaltung {
 			}
 		}
 		**/
-		
-		
-		
 		if (changeValue == 0){
 		for ( int i=0; i < personenzahl; i++){
 			
@@ -70,9 +67,8 @@ public class Personalverwaltung {
 		        "Personenspeicher",
 		        JOptionPane.QUESTION_MESSAGE, 
 		        null, 
-		        pers,
-		        Arrays.asList(pers).toString());
-		        Arrays.toString(pers);
+		        pers, 
+		        pers[i]);
 		    
 			
 		}

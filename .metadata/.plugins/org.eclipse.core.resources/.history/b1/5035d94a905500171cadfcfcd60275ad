@@ -1,6 +1,5 @@
 import java.util.Arrays;
 
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class Personalverwaltung {
@@ -55,31 +54,19 @@ public class Personalverwaltung {
 			}
 		}
 		**/
-		
-		
-		
-		if (changeValue == 0){
+		int veraenderung = Integer.parseInt(JOptionPane.showInputDialog("Welche Person soll verändert werden?" ));
 		for ( int i=0; i < personenzahl; i++){
 			
-			//pers[veraenderung].hausnummer= JOptionPane.showInputDialog("Welche Person soll verändert werden?" );
-	
+			pers[veraenderung].hausnummer.charAt(0);
 			
-		    JFrame frame = new JFrame("Input Dialog Example 3");
-		    String favoritePizza = (String) JOptionPane.showInputDialog(frame, 
-		        "Welche Person soll verändert werden2?",
-		        "Personenspeicher",
-		        JOptionPane.QUESTION_MESSAGE, 
-		        null, 
-		        pers,
-		        Arrays.asList(pers).toString());
-		        Arrays.toString(pers);
-		    
 			
-		}
+			
+			sad
+			
 		}
 		
 		
-		System.out.println(Arrays.toString(pers));
+		
 		while( changeValue == 0){
 		
 			for ( int i=0; i < personenzahl; i++){
