@@ -44,13 +44,7 @@ public class Person {
 	//Methoden
 	void ausgabe(){
 		
-		System.out.println("Vorname: "+ this.vorname );
-		System.out.println("Nachname: "+ this.nachname );
-		System.out.println("Straﬂe: "+ this.straﬂe );
-		System.out.println("Hausnummer: "+ this.hausnummer );
-		System.out.println("Postleitzahl: "+ this.postleitzahl );
-		System.out.println("Ort: "+ this.ort );
-		System.out.println(" ");
+
 		JOptionPane.showMessageDialog(null, "Vorname: " + this.vorname +
 				"\nNachname: " + this.nachname + 
 				"\nStraﬂe: " + this.straﬂe + 

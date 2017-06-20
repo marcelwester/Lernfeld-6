@@ -1,0 +1,111 @@
+import javax.swing.JOptionPane;
+import javax.swing.plaf.OptionPaneUI;
+
+public class Personalverwaltung {
+	
+	public static void main(String[] args) {
+		
+		//char changeValue= 'j';
+		int setNewValue= 0;
+		int changeValue=1;
+		
+		
+		
+		
+		int personenzahl=Integer.parseInt(JOptionPane.showInputDialog("Wie viele Personen sollen eingegeben werden?" ));
+		Person[] pers= new Person[personenzahl];
+		
+		
+		// Beliebig viele Personen durch dynamische Abfrage erzeugen
+		for (int i=0; i < personenzahl; i++){
+			
+			pers[i]=  new Person();		
+			
+			
+		}
+		
+		// Wurde ein Wert falsch eingegeben?
+		if ( personenzahl != 0){
+			
+			changeValue = JOptionPane.showConfirmDialog(null,
+                    "Soll eine Person verändert werden?",
+                    "Person Eintrag ändern",
+                    JOptionPane.YES_NO_OPTION);
+			
+		}
+
+		
+		
+				
+		while( changeValue == 0){
+		
+			for ( int i=0; i < personenzahl; i++){
+				
+
+			// Menü welcher Eintrag geändert werden soll
+					Object[] options = {"Vorname", "Nachname", "Straße", "Hausnummer", "Postleitzahl", "Ort"};
+
+					int selected = JOptionPane.showOptionDialog(null,
+														"Treffen Sie eine Auswahl",
+	                                                    "Alternativen",
+	                                                    JOptionPane.DEFAULT_OPTION, 
+	                                                    	JOptionPane.INFORMATION_MESSAGE, 
+	                                                    		null, options, options[0]);
+					
+
+						if (selected == 0){
+							pers[i].vorname = JOptionPane.showInputDialog("Ändern Sie Ihren Vornamen: ");
+							changeValue='1';
+							
+								
+						}
+						
+						if (selected == 1){
+							pers[i].nachname = JOptionPane.showInputDialog("Ändern Sie Ihren Nachnamen: ");
+							changeValue='1';
+							
+						}
+						if (selected == 2){
+							pers[i].straße = JOptionPane.showInputDialog("Ändern Sie Ihre Straße: ");
+							changeValue='1';
+							
+						}
+						if (selected == 3){
+							pers[i].hausnummer = JOptionPane.showInputDialog("Ändern Sie Ihre Hausnummer: ");
+							changeValue='1';
+							
+						}
+						if (selected == 4){
+							pers[i].postleitzahl = JOptionPane.showInputDialog("Ändern Sie Ihre Postleitzahl: ");
+							changeValue='1';
+							
+						}
+						if (selected == 5){
+							pers[i].ort = JOptionPane.showInputDialog("Ändern Sie Ihren Wohnort: ");
+							changeValue='1';
+							
+						}			
+				}
+
+			} // Ende While-Block
+
+		
+		for (int i=0; i<=pers.length-1; i++ ){
+			
+			System.out.println("Person: " + (i+1) );
+			pers[i].ausgabe();
+			
+					
+		}
+		
+		
+		
+		
+		
+		
+	}
+}
+	
+	
+
+

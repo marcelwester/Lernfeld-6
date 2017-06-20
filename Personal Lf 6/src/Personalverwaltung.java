@@ -1,50 +1,78 @@
+import java.util.Arrays;
+
 import javax.swing.JOptionPane;
 
 public class Personalverwaltung {
 	
 	public static void main(String[] args) {
 		
-		char changeValue= 'j';
-		int setNewValue= 0;
+		//char changeValue= 'j';
+		//int setNewValue= 0;
+		int changeValue=1;
+		int personenzahl;
 		
 		
-		test
 		
-		int personenzahl=Integer.parseInt(JOptionPane.showInputDialog("Wie viele Personen sollen eingegeben werden?" ));
+		
+		personenzahl=Integer.parseInt(JOptionPane.showInputDialog("Wie viele Personen sollen eingegeben werden?" ));
 		Person[] pers= new Person[personenzahl];
 		
 		
 		// Beliebig viele Personen durch dynamische Abfrage erzeugen
 		for (int i=0; i < personenzahl; i++){
 			
-			pers[i]=  new Person();			
+			pers[i]=  new Person();		
+			
 			
 		}
 		
-		// Wurde ein Wert falsch eingegeben?
+		// Frage ob Wert verändert werden soll?
 		if ( personenzahl != 0){
 			
-			changeValue= JOptionPane.showInputDialog("Möchten Sie einen Wert ändern j/n? ").charAt(0);
-		}
-		while (changeValue = 'j' ){
-			
-			JOptionPane.showMessageDialog(null, "Bitte Vornamen eingeben!");
-			this.vorname=JOptionPane.showInputDialog("Vorname eingeben: ");
-			
+			changeValue = JOptionPane.showConfirmDialog(null,
+                    "Soll eine Person verändert werden?",
+                    "Person Eintrag ändern",
+                    JOptionPane.YES_NO_OPTION);
 			
 		}
 		
-		
+		//Welche Person soll verändert werden?
+	/**	while (changeValue == 0){
+			
+			for ( int i=0; i < personenzahl; i++){
 				
-		while( changeValue == 'j'){
+			Object[] options = {pers[i]};
+
+			int selected = JOptionPane.showOptionDialog(null,
+												"Treffen Sie eine Auswahl",
+                                                "Alternativen",
+                                                JOptionPane.DEFAULT_OPTION, 
+                                                	JOptionPane.INFORMATION_MESSAGE, 
+                                                		null, options, options[0]);
+			
+			
+			}
+		}
+		**/
+		int veraenderung = Integer.parseInt(JOptionPane.showInputDialog("Welche Person soll verändert werden?" ));
+		for ( int i=0; i < personenzahl; i++){
+			
+			pers[veraenderung].hausnummer.charAt(0);
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		while( changeValue == 0){
 		
 			for ( int i=0; i < personenzahl; i++){
 				
-		
-				
-				
-				
-			
+
+			// Menü welcher Eintrag geändert werden soll
 					Object[] options = {"Vorname", "Nachname", "Straße", "Hausnummer", "Postleitzahl", "Ort"};
 
 					int selected = JOptionPane.showOptionDialog(null,
@@ -55,39 +83,36 @@ public class Personalverwaltung {
 	                                                    		null, options, options[0]);
 					
 
-					
-							
-				
 						if (selected == 0){
 							pers[i].vorname = JOptionPane.showInputDialog("Ändern Sie Ihren Vornamen: ");
-							changeValue='n';
+							changeValue='1';
 							
 								
 						}
 						
-						if (setNewValue == 1){
+						if (selected == 1){
 							pers[i].nachname = JOptionPane.showInputDialog("Ändern Sie Ihren Nachnamen: ");
-							changeValue='n';
+							changeValue='1';
 							
 						}
-						if (setNewValue == 2){
+						if (selected == 2){
 							pers[i].straße = JOptionPane.showInputDialog("Ändern Sie Ihre Straße: ");
-							changeValue='n';
+							changeValue='1';
 							
 						}
-						if (setNewValue == 3){
+						if (selected == 3){
 							pers[i].hausnummer = JOptionPane.showInputDialog("Ändern Sie Ihre Hausnummer: ");
-							changeValue='n';
+							changeValue='1';
 							
 						}
-						if (setNewValue == 4){
+						if (selected == 4){
 							pers[i].postleitzahl = JOptionPane.showInputDialog("Ändern Sie Ihre Postleitzahl: ");
-							changeValue='n';
+							changeValue='1';
 							
 						}
-						if (setNewValue == 5){
+						if (selected == 5){
 							pers[i].ort = JOptionPane.showInputDialog("Ändern Sie Ihren Wohnort: ");
-							changeValue='n';
+							changeValue='1';
 							
 						}			
 				}
